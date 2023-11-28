@@ -10,7 +10,7 @@ bot = telebot.TeleBot(os.getenv("TOKEN"))
 @bot.message_handler(commands=["start"])
 def start(massage):
     markut=types.InlineKeyboardMarkup()
-    item_1 = types.InlineKeyboardButton(text='Сгенерировать рандомное число', callback_data='random')
+    item_1 = types.InlineKeyboardButton(text='Рандомное число', callback_data='random')
     item_2 = types.InlineKeyboardButton(text='Рандомный напиток', callback_data='vodka')
     item_3 = types.InlineKeyboardButton(text='Рандомный стикер', callback_data='ctic')
     markut.add (item_1, item_2, item_3)
@@ -43,7 +43,7 @@ def callback(call):
                 photo_5 = open('шампусик.jpg', 'rb')
                 bot.send_photo(call.message.chat.id, photo_5)
         elif call.data == 'ctic':
-            b=(-2,0)
+            b=random.randint(-2,0)
             if b == 0:
                 photo_0 = open('стикер1.jpg', 'rb')
                 bot.send_photo(call.message.chat.id, photo_0)
