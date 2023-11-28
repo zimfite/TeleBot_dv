@@ -15,7 +15,7 @@ def start(massage):
     item_3 = types.InlineKeyboardButton(text='Рандомный стикер', callback_data='ctic')
     markut.add (item_1, item_2, item_3)
     
-    bot.send_message(massage.chat.id, "Привет! Этот бот в будущем будет делать великие дела!!! Пока вы можете получить рандомное число до 100. \n Разработала Катюша 🥲", reply_markup=markut)
+    bot.send_message(massage.chat.id, "Привет! Этот бот в будущем будет делать великие дела!!! \n Разработала Катюша 🥲", reply_markup=markut)
 
 @bot.callback_query_handler(func=lambda call:True)
 
