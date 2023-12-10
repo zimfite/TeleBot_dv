@@ -17,7 +17,7 @@ def start(massage):
     
     bot.send_message(massage.chat.id, "Привет! Этот бот в будущем будет делать великие дела!!! \n Разработала Катюша 🥲", reply_markup=markut)
 
-@bot.callback_query_handler(func=lambda call:True)
+@bot.callback_query_handler(lambda call:True)
 
 def callback(call):
     if call.message:
